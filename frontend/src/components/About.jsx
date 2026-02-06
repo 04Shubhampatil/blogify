@@ -36,10 +36,10 @@ const About = () => {
 
             <div className="mt-8 flex items-center justify-center gap-6 lg:justify-start">
               {[
-                { icon: <Github size={20} />, href: "#" },
-                { icon: <Linkedin size={20} />, href: "#" },
-                { icon: <Twitter size={20} />, href: "#" },
-                { icon: <Mail size={20} />, href: "#" },
+                { icon: <Github size={20} />, href: "https://github.com/04Shubhampatil" },
+                { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/shubham-patil-9773032b4/" },
+                { icon: <Twitter size={20} />, href: "https://x.com/SHUBHAMPAT13628" },
+                { icon: <Mail size={20} />, href: "theshubhampatil04@gmail.com" },
               ].map((link, idx) => (
                 <a
                   key={idx}
@@ -80,9 +80,8 @@ const About = () => {
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">Skills & Expertise</h2>
             <div className="mt-6 flex flex-wrap gap-2">
               {[
-                "React & Next.js", "Node.js", "TypeScript",
-                "Tailwind CSS", "MongoDB", "PostgreSQL",
-                "UI/UX Design", "Git & CI/CD"
+                "React", "Node.js", "TypeScript","C & C++","Java",
+                "Tailwind CSS", "MongoDB", "Git & GitHub"
               ].map((skill) => (
                 <span
                   key={skill}
