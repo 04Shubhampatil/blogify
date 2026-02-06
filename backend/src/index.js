@@ -12,6 +12,8 @@ import commentRouter from './routes/commentRoute.js'
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.set('trust proxy', 1); // Trust first proxy (Render)
+
 
 
 //middelware

@@ -118,7 +118,12 @@ const logInUser = async (req, res) => {
         }
 
         const token = await setuser(user);
-        res.cookie("token", token)
+        res.cookie("token", token, {
+            httpOnly: true,
+            sameSite: 'none',
+            secure: true,
+            maxAge: 24 * 60 * 60 * 1000 // 1 day
+        })
 
 
 
@@ -144,7 +149,9 @@ const logourtUser = async (req, res) => {
     try {
 
         res.clearCookie("token", {
-            httpOnly: true
+            httpOnly: true,
+            sameSite: 'none',
+            secure: true,
         });
         return res.status(200).json({
             success: true,
