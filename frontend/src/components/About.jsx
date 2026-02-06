@@ -39,7 +39,7 @@ const About = () => {
                 { icon: <Github size={20} />, href: "https://github.com/04Shubhampatil" },
                 { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/shubham-patil-9773032b4/" },
                 { icon: <Twitter size={20} />, href: "https://x.com/SHUBHAMPAT13628" },
-                { icon: <Mail size={20} />, href: "theshubhampatil04@gmail.com" },
+                { icon: <Mail size={20} />, href: "mailto:theshubhampatil04@gmail.com" },
               ].map((link, idx) => (
                 <a
                   key={idx}
@@ -80,7 +80,7 @@ const About = () => {
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">Skills & Expertise</h2>
             <div className="mt-6 flex flex-wrap gap-2">
               {[
-                "React", "Node.js", "TypeScript","C & C++","Java",
+                "React", "Node.js", "TypeScript", "C & C++", "Java",
                 "Tailwind CSS", "MongoDB", "Git & GitHub"
               ].map((skill) => (
                 <span

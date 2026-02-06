@@ -120,8 +120,8 @@ const logInUser = async (req, res) => {
         const token = await setuser(user);
         res.cookie("token", token, {
             httpOnly: true,
-            sameSite: 'none',
-            secure: true,
+            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // Use 'lax' for local development
+            secure: process.env.NODE_ENV === 'production', // Only 'true' in production
             maxAge: 24 * 60 * 60 * 1000 // 1 day
         })
 
