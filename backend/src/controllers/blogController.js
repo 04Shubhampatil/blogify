@@ -119,7 +119,8 @@ const getBlogByid = async (req, res) => {
         console.error("Get blog by ID error:", error);
         return res.status(500).json({
             success: false,
-            message: "Server error"
+            message: "Server error fetching blog details",
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
     }
 }
@@ -140,8 +141,8 @@ const getSearch = async (req, res) => {
 
         return res.status(200).json({ blogs });
     } catch (error) {
-
-        return res.status(500).json({ message: "Server error" });
+        console.error("Search query error:", error);
+        return res.status(500).json({ message: "Server error during search" });
     }
 };
 
@@ -169,11 +170,11 @@ const deleteBlog = async (req, res) => {
             message: "Blog deleted successfully",
         });
     } catch (error) {
-        console.log(error);
-
+        console.error("Delete blog error:", error);
         return res.status(500).json({
             success: false,
-            message: "Server error"
+            message: "Server error deleting blog",
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
     }
 }

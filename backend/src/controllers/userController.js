@@ -78,12 +78,12 @@ const registerUser = async (req, res) => {
             userId: user._id
         });
     } catch (error) {
-        console.error(error);
-        return res.status(500).
-            json({
-                success: false,
-                message: "Server error"
-            });
+        console.error("Register user error:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Server error during registration",
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+        });
     }
 };
 
@@ -136,12 +136,12 @@ const logInUser = async (req, res) => {
 
 
     } catch (error) {
-        console.error(error);
-        return res.status(500).
-            json({
-                success: false,
-                message: "Server error"
-            });
+        console.error("Login user error:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Server error during login",
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+        });
     }
 }
 
@@ -160,13 +160,12 @@ const logourtUser = async (req, res) => {
 
 
     } catch (error) {
-        console.log(error);
-
-        return res.status(500).
-            json({
-                success: false,
-                message: "Server error"
-            });
+        console.error("Operation failed:", error);
+        return res.status(500).json({
+            success: false,
+            message: "Server error",
+            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+        });
     }
 }
 
