@@ -20,7 +20,7 @@ const Home = () => {
         const res = await axios.get(BLOG_API_END_POINT);
         setBlogs(res.data?.blogs || []);
       } catch (err) {
-        console.error("Failed to fetch blogs");
+        console.error("Failed to fetch blogs:", err);
       } finally {
         setLoading(false);
       }
