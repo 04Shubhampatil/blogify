@@ -80,8 +80,8 @@ const About = () => {
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">Skills & Expertise</h2>
             <div className="mt-6 flex flex-wrap gap-2">
               {[
-                "React", "Node.js", "TypeScript", "C & C++", "Java",
-                "Tailwind CSS", "MongoDB", "Git & GitHub"
+                "HTML","CSS", "JavaScript", "React", "Node.js", "TypeScript", "C & C++", "Java",
+                "Tailwind CSS", "MongoDB", "Next.JS","Docker", "Git & GitHub"
               ].map((skill) => (
                 <span
                   key={skill}
@@ -92,10 +92,13 @@ const About = () => {
               ))}
             </div>
 
-            <button className="group mt-10 inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400">
-              Download Full Resume
-              <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
-            </button>
+            <a
+        href="https://drive.google.com/file/d/1BkP3eC0M18WYVqtWb4V9Y6fYMnEOMzp0/view?usp=sharing"
+         download
+         className="group mt-10 inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400"
+           >
+             Download Full Resume
+           </a>
           </div>
         </section>
       </main>
