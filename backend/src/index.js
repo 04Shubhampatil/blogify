@@ -30,7 +30,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://blogifyi.netlify.app",
-    "https://blogifyi.vercel.app"
+   "https://blogify-chi-nine.vercel.app/login"
   ],
   credentials: true
 }));app.use(bodyParser.urlencoded({ extended: true }));
