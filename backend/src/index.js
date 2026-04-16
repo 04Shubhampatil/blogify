@@ -31,7 +31,7 @@ app.use(cors({
     "http://localhost:5173",
     "https://blogifyi.netlify.app",
    "https://blogify-lnp93xeb3-patilo4s-projects.vercel.app"
-    "https://blogify-chi-nine.vercel.app/"
+    "https://blogify-chi-nine.vercel.app"
   ],
   credentials: true
 }));app.use(bodyParser.urlencoded({ extended: true }));
