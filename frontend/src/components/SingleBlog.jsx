@@ -44,7 +44,7 @@ function SingleBlog() {
       if (res.data.comment) {
         setComments((prev) => [res.data.comment, ...prev]);
       }
-      reset();
+      setcomments("")
     } catch (error) {
       alert(error.response?.data?.message || "Failed to add comment");
     }
