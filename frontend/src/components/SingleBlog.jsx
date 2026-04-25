@@ -142,7 +142,7 @@ function SingleBlog() {
             <div className="mt-8 rounded-3xl border bg-zinc-50 p-6 dark:border-white/5 dark:bg-white/5">
               <textarea
                 placeholder="What are your thoughts?"
-                className="min-h-[120px] w-full resize-none bg-transparent text-zinc-900 outline-none placeholder:text-zinc-500 dark:text-white"
+                className="min-h-[100px] w-full resize-none bg-transparent text-zinc-900 outline-none placeholder:text-zinc-500 dark:text-white"
                 {...register("comment", { required: true })}
               />
               <div className="mt-4 flex justify-end">
